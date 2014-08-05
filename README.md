@@ -3,6 +3,10 @@
 Cookbook to setup keepalived clusters (for HA and load balancing) in a flexible way. 
 It supports all keepalived parameters and it can read all of them from a databag.
 
+ * Support to add all necessary sysctl parameters                                            
+ * With DR, it will setup the VIP in all nodes using dummy network interface
+
+
 ## Supported Platforms
 
  * Debian
