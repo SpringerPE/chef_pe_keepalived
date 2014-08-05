@@ -1,0 +1,13 @@
+DEPENDENCIES
+  chef-solo-search
+  pe_keepalived
+    path: .
+    metadata: true
+
+GRAPH
+  chef-solo-search (0.5.1)
+  ohai (2.0.1)
+  pe_keepalived (0.1.0)
+    sysctl (~> 0.6.0)
+  sysctl (0.6.0)
+    ohai (>= 0.0.0)
