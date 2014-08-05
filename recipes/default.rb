@@ -17,6 +17,11 @@
 # limitations under the License.
 #
 
+# Loads the configuration from a databag
+if node[:pe_keepalived][:data_bag]
+   include_recipe 'pe_keepalived::databag'
+end
+
 # keepalived
 include_recipe 'pe_keepalived::keepalived'
 
