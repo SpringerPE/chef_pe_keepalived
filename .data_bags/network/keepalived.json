@@ -1,0 +1,25 @@
+{
+    "id": "keepalived",
+    "_default": {
+        "sync_groups": {
+            "haproxy": {
+                "notify_fault": "script2",
+                "instances": {
+                    "web": {
+                        "master": "23.23.23.23", 
+                        "interface": "eth1",
+                        "virtual_ipaddress": ["12.12.12.12"],
+                        "scripts": {          
+                            "chk_haproxy": {
+                                "script": "killall -0 haproxy",
+                                "interval": "2",
+                                "weight": "2"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
